@@ -1,0 +1,16 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+# Штука икслючение если типа файл существует то он его не трогает, для статики типа ксс и прочего
+
+RewriteRule .* index.php?php1chpu=$0 [QSA] 
+#записать в гет параметр php1chpu строку опосля папки где лежит штаксес, кса позволяет оставить 
+#геты другие
+
+<FilesMatch "\.(php)$">
+	Deny from all
+</FilesMatch>
+
+<FilesMatch "index.(php)$">
+	Allow from all
+</FilesMatch>
