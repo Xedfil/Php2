@@ -17,7 +17,7 @@
 	
 	// if($params[$end] === ''){ // Убераем последний параметр если, он после слэша пустой. зачем?
 	// 	unset($params[$end]);
-	// 	$end--;
+	// 	$end--;  sd
 	// }
 
 	$controller = trim(isset($params[0]) && $params[0] !== '' ? $params[0] : 'post');
